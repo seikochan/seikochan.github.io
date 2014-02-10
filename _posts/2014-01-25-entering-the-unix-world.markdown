@@ -20,3 +20,6 @@ Now that I've entered the Linux World I've found that knowing shortcuts is almos
 
 ##Manually Installing Programs: Using /opt/bin/
 
+[Warren Togami]: https://plus.google.com/111016575583263172224/about
+[Here]:http://www.tomshardware.com/reviews/fedora-16-gnome-3-review,3155-10.html
+
