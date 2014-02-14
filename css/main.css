@@ -17,21 +17,68 @@ body {
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
-  background-image: url('../imgs/black_striped_bg.jpg');
+  /* background-image: url('../imgs/black_striped_bg.jpg');
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
 
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
 
-h1 { margin-bottom: 1em; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Andada', serif;
+  font-size: 100%;
+  font-weight: 400; 
+}
+
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+
 p { margin: 1em 0; }
 
 a         { color: #00a; }
-a:hover   { color: #000; }
+a:active  { outline: 0;  }
+a:hover   { color: #000; 
+            outline: 0 ; }
 a:visited { color: #a0a; }
+a:focus   { outline: thin dotted;}
+
+code {
+  font-family: "Monaco", monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
 
 /*****************************************************************************/
 /*
