@@ -3,10 +3,10 @@ layout: post
 title:  "Entering the Linux World: Fedora 20"
 date:   2014-01-25 13:04:47
 categories: fedora linux OS
+image:
+ feature: fedora_bg.jpg
 ---
 
-#How I Got Started With Fedora
------------------------------
 For most of my life I have been only a Windows user, content with the capabilities that Windows provides.  But as I continued into the field of Computer Science,  Windows Operating System just provided more and more trouble to deal with.  Finally I had the opportunity to make the switch from Windows to a linux operating system, in this case Fedora.
 
 With a massive amount of help from [Warren Togami], the founder of the Fedora Operating System, I was able to completely redo my computer setup and have Fedora 20 installed as main OS.
@@ -14,7 +14,7 @@ With a massive amount of help from [Warren Togami], the founder of the Fedora Op
 ##Handy Shortcuts
 Now that I've entered the Linux World I've found that knowing shortcuts is almost expected.  
 
-[Here] I found some extremely convinient and helpful shortcuts to use.
+[Here] and [here] I found some extremely convinient and helpful shortcuts to use.
 
 ##Installing Programs via Fedora
 Another amazing capability that linux systems have is that they provide their own versions of software package managers.  Fedora uses [yum].  So if you want to install a certain program you should actually check yum to see if it has it first!
@@ -23,7 +23,7 @@ For example if you wanted to install clisp you would:
 
 1. check if it is already installed on your system: 
 
-	{% highlight ruby linenos=table %}
+	{% highlight bash linenos %}
     [root@localhost ~]# rpm -qa | grep 'clisp*'
     {% endhighlight %}
    
@@ -31,13 +31,13 @@ For example if you wanted to install clisp you would:
 
    OR you could also use
 
-	{% highlight ruby linenos=table %}
+	{% highlight bash linenos %}
     [root@localhost ~]# yum list installed | grep 'clisp*'
     {% endhighlight %}  
 
 
 2. check if yum has it:  
-	{% highlight ruby linenos=table %}
+	{% highlight bash linenos %}
 	[root@localhost ~]# yum search clisp
 	Loaded plugins: langpacks, refresh-packagekit
 	================================================================= N/S matched: clisp =================================================================
@@ -49,11 +49,12 @@ For example if you wanted to install clisp you would:
 
   	Name and summary matches only, use "search all" for everything.
   	{% endhighlight %}
+  	
 
   We can see that yum found the following packages with the name 'clisp' in it.  
 
  3. install it using yum: 
- 	{% highlight ruby linenos=table %} 
+ 	{% highlight bash linenos %}
 	[root@localhost ~]# yum install clisp
 	Loaded plugins: langpacks, refresh-packagekit
 	Resolving Dependencies
@@ -102,9 +103,9 @@ Unfortunately if yum does not have the program, you will have to manually downlo
 
 For example if you wanted to install sublime2:
 
-1. download the program and unzip it into your /opt directory:
-	
-	{% highlight ruby linenos %}
+<!-- 1. download the program and unzip it into your /opt directory:
+ -->	
+	{% highlight bash linenos %}
 	[root@localhost ~]# cd /opt
 	[root@localhost opt]# tar xfv /home/seikochan/Downloads/Sublime Text 2.0.2 x64.tar.bz2
 	[root@localhost opt]# cd Sublime\ Text\ 2/
@@ -114,7 +115,7 @@ For example if you wanted to install sublime2:
 
 2. make a symlink in your /usr/local/bin
 
-	{% highlight ruby linenos %}
+	{% highlight bash linenos %}
 	[root@localhost ~]# cd /usr/local/bin
 	[root@localhost bin]# ls
 	[root@localhost bin]# ln -s /opt/Sublime\ Text\ 2/sublime_text
@@ -127,7 +128,7 @@ For example if you wanted to install sublime2:
 
 3. test it from anywhere!
 
-	{% highlight ruby linenos %}
+	{% highlight html linenos %}
 	[root@localhost ~]$ sublime_text .
 	{% endhighlight %}
 
@@ -136,6 +137,7 @@ For example if you wanted to install sublime2:
 
 [Warren Togami]: https://plus.google.com/111016575583263172224/about
 [Here]:http://www.tomshardware.com/reviews/fedora-16-gnome-3-review,3155-10.html
+[here]:https://wiki.gnome.org/Projects/GnomeShell/CheatSheet
 [yum]:https://fedoraproject.org/wiki/Yum
 [rpm]:http://www.thegeekstuff.com/2010/07/rpm-command-examples/
 

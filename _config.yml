@@ -1,3 +1,29 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+title:            Seikochan's Blog
+description:      A journey of a CompSci individual.
+#Comment out url when working locally to resolve base urls correctly
+#url: http://jekyll.gtat.me
+
+# Owner/author information
+owner:
+  name:           Jasmine Ishigami
+  email:          j.s.ishigami@gmail.com  
+  github:         seikochan        
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Github
+    url: https://github.com/seikochan
+    external: true
+
+future:      true
+pygments:    true
+markdown:    redcarpet
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
