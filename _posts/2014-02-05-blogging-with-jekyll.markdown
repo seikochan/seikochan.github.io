@@ -10,9 +10,8 @@ image:
 Instead of using a premade site or writing a blog using html, I was introduced to a much better alternative of a static site generator called [Jekyll].  The advantages of blogging using Jekyll are: 
 
 
-1. It utilizes [markdown] \(.md\), which is a plain text formatting syntax (Although css and html are still supported).  
-		There are many different markdown parsers, which convert the plain text written into valid html.  Note that using different parsers does impact how you write your markdown.  Each one may require slightly different mardown syntax.  Currently I am using [redcarpet].
-
+1. It utilizes [markdown] while still supporting css, html, and liquid.
+		By incorporating markdown, Jekyll makes it easier to write posts and content really easily with having to know all the html for formatting or laying out the content.  It also makes posts easier to read, add to, or update.
 
 2. It generates a static site.  
 		This means that the webpage is displayed exactly as stored and there are no other web application needed to generate it.  Its great for blogs since much of the content doesn't need to updated constantly.  Also, it leads to less security issues as well.
@@ -53,10 +52,6 @@ If you want even more details, you can check out [Jekyll's Documentation] or [Ye
 
 [Jekyll]: http://jekyllrb.com/
 [Jekyll's Documentation]: http://jekyllrb.com/docs/home/
-[markdown]: http://daringfireball.net/projects/markdown/
-[markdown tutorial]: http://www.markdowntutorial.com/
-[red carpet]: https://github.com/vmg/redcarpet
 [themes]: http://jekyllthemes.org/
 [Yes We Jekyll]: http://yeswejekyll.com/
-[markdown reference guide]: http://support.iawriter.com/help/kb/general-questions/markdown-syntax-reference-guide
-[rbenv]: 
+
