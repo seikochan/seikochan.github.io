@@ -17,4 +17,3 @@ image:
 [markdown tutorial]: http://www.markdowntutorial.com/ 
 [Dillinger]: dillinger.io
 [markdown reference guide]: http://support.iawriter.com/help/kb/general-questions/markdown-syntax-reference-guide
-[rbenv]: 

@@ -45,11 +45,7 @@ As you can see, all you need to do is open a browser to the server address and t
 If you want even more details, you can check out [Jekyll's Documentation] or [Yes We Jekyll].
 
 
-
-
-
-
-
+[markdown]: http://seikochan.github.io/markdown/redcarpet/writing-in-markdown/
 [Jekyll]: http://jekyllrb.com/
 [Jekyll's Documentation]: http://jekyllrb.com/docs/home/
 [themes]: http://jekyllthemes.org/
