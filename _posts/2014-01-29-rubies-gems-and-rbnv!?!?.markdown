@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rubies, Gems, and rbenv?!?!"
+title:  "Rubies, Gems, and Rbenv?!?!"
 date:   2014-01-29 17:32:42
 categories: ruby gem rbenv
 image:
