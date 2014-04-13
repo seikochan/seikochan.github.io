@@ -288,7 +288,6 @@ But for some of us, even with git status, git log, and git diff, its still too d
 [more]: https://github.com/features
 [Github]: https://github.com
 [walkthough]: https://help.github.com/articles/set-up-git
-
 [new-github-repo]: /images/new_github_repo.png  "How to create new github repo."
 [git-new-repo]: /images/Git_new_repo.png "How to set up new repo."
 [github-simple-instructions]: /images/github_simple_instructions.png "How to setup github repo as remote for local repository to push to."
