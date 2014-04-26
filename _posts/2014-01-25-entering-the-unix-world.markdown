@@ -107,7 +107,7 @@ For example if you wanted to install sublime2:
  -->	
 	{% highlight bash linenos %}
 	[root@localhost ~]# cd /opt
-	[root@localhost opt]# tar xfv /home/seikochan/Downloads/Sublime Text 2.0.2 x64.tar.bz2
+	[root@localhost opt]# tar xfv /home/username/Downloads/Sublime Text 2.0.2 x64.tar.bz2
 	[root@localhost opt]# cd Sublime\ Text\ 2/
 	[root@localhost Sublime Text 2]# ls
 	Icon  lib  PackageSetup.py  Pristine Packages  sublime_plugin.py  sublime_text

@@ -30,10 +30,10 @@ Fill in the content with the yml header and your blog post content written with 
 Now that you have created a post, navigate to your blog directory and run the command:
 
 	{% highlight bash linenos %}
-	[seikochan@localhost Jekyll-Blog]$ jekyll serve
-	Configuration file: /home/seikochan/Work/Jekyll-Blog/_config.yml
-	            Source: /home/seikochan/Work/Jekyll-Blog
-	       Destination: /home/seikochan/Work/Jekyll-Blog/_site
+	[username@localhost Jekyll-Blog]$ jekyll serve
+	Configuration file: /home/username/Work/Jekyll-Blog/_config.yml
+	            Source: /home/username/Work/Jekyll-Blog
+	       Destination: /home/username/Work/Jekyll-Blog/_site
 	      Generating... done.
 	 Auto-regeneration: enabled
 	    Server address: http://0.0.0.0:4000

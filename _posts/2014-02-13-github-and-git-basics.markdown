@@ -21,23 +21,23 @@ To begin, just go to [GitHub] and create an account.  Make sure to use a main em
 First, create a local directory where you would like all your files to be located.  Then do the command 'git init', which will initialize git in the directory for that project.  To verify that 'git init' worked, make sure that the .git file was created.
 
 {% highlight bash linenos %}
-[seikochan@localhost sample_test]$ git init
-Initialized empty Git repository in /home/seikochan/Work/sample_test/.git/
-[seikochan@localhost sample_test]$ ls -al
+[username@localhost sample_test]$ git init
+Initialized empty Git repository in /home/username/Work/sample_test/.git/
+[username@localhost sample_test]$ ls -al
 total 12
-drwxrwxr-x.  3 seikochan seikochan 4096 Mar 25 12:09 .
-drwxrwxr-x. 12 seikochan seikochan 4096 Mar 25 12:09 ..
-drwxrwxr-x.  7 seikochan seikochan 4096 Mar 25 12:09 .git
+drwxrwxr-x.  3 username username 4096 Mar 25 12:09 .
+drwxrwxr-x. 12 username username 4096 Mar 25 12:09 ..
+drwxrwxr-x.  7 username username 4096 Mar 25 12:09 .git
 {% endhighlight %}
 
 2. add/modify content  
 Next, you want to just add some content or, if you already have files setup, make some modifications.  In this case I will just make a simple readme.
 
 {% highlight bash linenos %}
-[seikochan@localhost sample_test]$ vim README.md
-[seikochan@localhost sample_test]$ cat README.md 
+[username@localhost sample_test]$ vim README.md
+[username@localhost sample_test]$ cat README.md 
 This a sample test project to show the basic workflow of git and github.
-[seikochan@localhost sample_test]$ ls
+[username@localhost sample_test]$ ls
 README.md
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ README.md
 Now that we have made changes, we can use 'git status' to see what has changed.  By using this command, we can see the tracked files (files that have changed and will be added to the commit) and untracked files (files that have changed that will not be added to the commit and ignored by git).  Looking below, we can see that the readme file is currently not being tracked and so it prompts us to use 'git add' to add it to the tracked files.
 
 {% highlight bash linenos %}
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git status
 On branch master
 
 Initial commit
@@ -61,8 +61,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 3. 'git add'
 {% highlight bash linenos %}
-[seikochan@localhost sample_test]$ git add README.md 
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git add README.md 
+[username@localhost sample_test]$ git status
 On branch master
 
 Initial commit
@@ -72,11 +72,11 @@ Changes to be committed:
 
 	new file:   README.md
 
-[seikochan@localhost sample_test]$ vim junkfile
-[seikochan@localhost sample_test]$ cat junkfile 
+[username@localhost sample_test]$ vim junkfile
+[username@localhost sample_test]$ cat junkfile 
 this is junk
-[seikochan@localhost sample_test]$ git add junkfile 
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git add junkfile 
+[username@localhost sample_test]$ git status
 On branch master
 
 Initial commit
@@ -92,12 +92,12 @@ Changes to be committed:
 Now that we have made some modifications and 'added' all the changes we want to keep track of, we can now 'commit' these changes to the history of this project.  Imagine each commit as a breakpoint in a project, where Github allows us to see the changes from one commit to the next.
 
 {% highlight bash linenos %}
-[seikochan@localhost sample_test]$ git commit -m 'Initial Commit'
+[username@localhost sample_test]$ git commit -m 'Initial Commit'
 [master (root-commit) 153a770] Initial Commit
  2 files changed, 3 insertions(+)
  create mode 100644 README.md
  create mode 100644 junkfile
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git status
 On branch master
 nothing to commit, working directory clean
 {% endhighlight %}  
@@ -109,7 +109,7 @@ NOTE:  This commit is only locally saved, so you will not see any changes to a p
 Now that we have local commit(s), we want to 'push' it up to Github so that we have a non-local commit history.  But as you can see if we try to push now we get an error.  Git is trying to tell you "Hey I don't know where to push this!".  
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git push
+[username@localhost sample_test]$ git push
 fatal: No configured push destination.
 Either specify the URL from the command-line or configure a remote repository using
 
@@ -132,9 +132,9 @@ Now you have to "connect" this github repository with your local on.  This mean 
 You can just copy paste all those into your terminal and you're good to go!  Since we created the repo locally first, we will use the "Push an existing repository from the command line" commands.  As you can see below, you can first use git remote -v (the -v means verbose) to see if there is any remotes connected.  There isn't so we add a remote and after we can see that any 'fetch' or 'push' we do from this project will be from and to the same git repo on Github.  
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git remote -v
-[seikochan@localhost sample_test]$ git remote add origin git@github.com:seikochan/sample_test.git
-[seikochan@localhost sample_test]$ git remote -v
+[username@localhost sample_test]$ git remote -v
+[username@localhost sample_test]$ git remote add origin git@github.com:seikochan/sample_test.git
+[username@localhost sample_test]$ git remote -v
 origin	git@github.com:seikochan/sample_test.git (fetch)
 origin	git@github.com:seikochan/sample_test.git (push)
 {% endhighlight %}
@@ -143,7 +143,7 @@ origin	git@github.com:seikochan/sample_test.git (push)
 Now we can finally git push!  Using the below command, we are saying "Push my local repository and its commits (master) to my Github.com repository (origin)".
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git push -u origin master
+[username@localhost sample_test]$ git push -u origin master
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
@@ -163,7 +163,7 @@ Now if you refresh your Github repository, you should see something like this.  
 Remember that GitHub change also have changes done via the site as well.  Also, if you are collaborating, changes from other may occur to your online repository.  So a very important thing to do before working on one the projects is to do a 'git pull'.  This means "pull any changes that have been added to the GitHub repo".  
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git pull
+[username@localhost sample_test]$ git pull
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0)
@@ -174,7 +174,7 @@ Updating 153a770..bd9c045
 Fast-forward
  junkfile | 3 +++
  1 file changed, 3 insertions(+)
-[seikochan@localhost sample_test]$ git pull
+[username@localhost sample_test]$ git pull
 Already up-to-date.
 {% endhighlight %}    
 
@@ -187,12 +187,12 @@ NOTE: If you make local changes that conflict with changes from the GitHub repo 
 Sometimes you might have to completely remove or delete certain files. But when you try to 'add' the files to be commited, you might run into the problem that 'git add' no longer does what you want!  To add any "deleted" files to you commits, you need to use 'git add -u'.
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ ls
+[username@localhost sample_test]$ ls
 junkfile  README.md
-[seikochan@localhost sample_test]$ rm -f junkfile 
-[seikochan@localhost sample_test]$ ls
+[username@localhost sample_test]$ rm -f junkfile 
+[username@localhost sample_test]$ ls
 README.md
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
@@ -203,7 +203,7 @@ Changes not staged for commit:
 	deleted:    junkfile
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[seikochan@localhost sample_test]$ git add junkfile 
+[username@localhost sample_test]$ git add junkfile 
 warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
 whose behaviour will change in Git 2.0 with respect to paths you removed.
 Paths like 'junkfile' that are
@@ -216,8 +216,8 @@ removed from your working tree are ignored with this version of Git.
 
 Run 'git status' to check the paths you removed from your working tree.
 
-[seikochan@localhost sample_test]$ git add -u junkfile 
-[seikochan@localhost sample_test]$ git status
+[username@localhost sample_test]$ git add -u junkfile 
+[username@localhost sample_test]$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
@@ -234,7 +234,7 @@ Similar to 'git status', but each with their own unique functionalites, there is
 'git log' will show you your local commit history, its address, who committed it, when it was committed, and what the commit description was.
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git log
+[username@localhost sample_test]$ git log
 commit bd9c0459fe40cb6684954aed3d00076f19722c53
 Author: seikochan <j.s.ishigami@gmail.com>
 Date:   Thu Apr 3 00:12:13 2014 -1000
@@ -251,7 +251,7 @@ Date:   Tue Mar 25 13:03:51 2014 -1000
 On the other hand, 'git diff' will show the changes, or differences, between different commits.  If 'git diff' is entered with no specifications, it will just show specifically what has been changed compared to the most recent commit.  You may also specify which commits to show the differences between.  For example, 'git diff HEAD~1..HEAD' means to compare and show the differences between right now (HEAD) and 1 commit ago (HEAD~1).
 
 {% highlight bash lineos %}
-[seikochan@localhost sample_test]$ git diff
+[username@localhost sample_test]$ git diff
 diff --git a/junkfile b/junkfile
 index 17d0324..da185dc 100644
 --- a/junkfile
@@ -262,7 +262,7 @@ index 17d0324..da185dc 100644
  :D
 +
 +These are lines I have just modified locally but not yet commited!
-[seikochan@localhost sample_test]$ git diff HEAD~1..HEAD
+[username@localhost sample_test]$ git diff HEAD~1..HEAD
 diff --git a/junkfile b/junkfile
 index 811d575..da185dc 100644
 --- a/junkfile
