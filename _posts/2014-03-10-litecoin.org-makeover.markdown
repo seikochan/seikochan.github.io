@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Litecoin.org Makeover"
-date:   2014-03-05 10:34:43
+date:   2014-03-10 10:34:43
 categories: litecoin.org, litecoin, static site
 image:
  feature: litecoin_bg.jpg

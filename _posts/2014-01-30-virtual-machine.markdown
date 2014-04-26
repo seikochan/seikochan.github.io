@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fedora's Virtual Machine Manager: libvirt"
-date:   2014-01-13 13:04:47
+date:   2014-01-30 15:05:58
 categories: kvm, virt, virtual manager 
 image:
  feature: libvirt_bg.png

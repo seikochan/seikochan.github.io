@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GitHub and Git: Basics"
-date:   2014-01-13 13:04:47
+date:   2014-02-13 08:55:24
 categories: github git 
 image:
  feature: octocat_bg.jpeg
