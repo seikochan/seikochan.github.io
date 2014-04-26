@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Litecoin.org Makeover"
+date:   2014-03-05 10:34:43
+categories: litecoin.org, litecoin, static site
+image:
+ feature: litecoin_bg.jpg
+---
+
+Although the litecoin.org page was functional, we wanted to redo the structure almost completely.  The [old litecoin.org] used mainly node.js while the [new litecoin.org] uses Middleman, a static site generator. Here is a short exercept from one of [my posts] on litecointalk.org about what changes we made:
+
+> __New Website__  
+> https://www.litecoin.org  
+> One of the first things I worked on is a refresh of litecoin.org.  Currently it does not look much different from the old site, but it now uses a modern framework using best practices with fully parameterized localizations.  With the code cleaner and easier to understand more people will be able to help to improve it.
+
+> https://github.com/litecoin-project/litecoin.org  
+> The site now uses the static site generator Middleman.  My advisors selected this framework because it makes it very easy to add new content and it has built-in support for localization.  Some of you in the community have already begun to contribute improvements via Github issues and pull requests.  
+
+## Why the Change?  
+The main reason we wanted to change litecoin.org was because it is just a single page.  Therefore, there isn't really a need for such a complex framework like node.js.  A static site generator would be easier to update and easier to understand by others who would like to contribute to the site.  The other significant reason was that there was no localization framework in use.  The old litecoin.org site had all the translations embedded into the node.js and html.  Not only did this make it hard to find each of the translations, it also made it hard to add new translations or update the translations.  By switching to a static site generator, we were able to use yaml translation files to easily separate each translation.    
+Middleman also has an [i18n ruby gem]  for [internationalization], which I will talk about a little later.  From this, we were able to link the yaml files to [Transifex].  The purpose of Transifex is to facilitate translating a source language into multiple foreign languages via the community.  It also makes it easier to update the current locale files in the github project because we can easily export translations in the yml format and repush them back up to github.
+
+
+## Middleman instead of Jekyll  
+We started off trying to change over the site to be jekyll compatible but we realized that trying to implement an easy way to internationalize the site would be a bit difficult.  Thus, we swithced to Middleman since it had an i18n gem already made. By downloading the gem, you could just put tags like '<%= t 'title.name' =%>' throughout the html.  The t is short for translation.  The ruby will parse out these tags when you middleman build the site, and replace all tages with the correct translation that is being used.  The title.head part just specifies what part of the yaml file you want to replace each tag.  Therefore, the main reason we choose Middleman over Jekyll was due to our need of a simple and convenient way for internationalization. [Here] it explains how to user i18n with Middleman.
+
+## Other Middleman Specifications   
+We also found out some interesting specification issues that we needed to fix to get the site up and running correctly with i18n.  
+
+1. Issue: Not all languages were availiable when site was built with middleman.  
+ Soloution: The ':langs' was removed from the config file.  If the option ':langs' is specified in the config file, ruby will only specify the languages that are listed.  Removing this option will let ruby automatically discover files in the locales files.
+
+2. Issue: English was not the default language.  
+ Solution: The first language found in the locales file will become the default language.  To fix this, just add the ':mount\_at\_root => :en' option to specify which language you want to be default.
+
+
+
+[old litecoin.org]: https://github.com/litecoin-project/litecoin.org-old
+[new litecoin.org]: https://github.com/litecoin-project/litecoin.org/tree/master
+[my posts]: https://litecointalk.org/index.php?topic=17395.0
+[litecointalk.org]: https://litecointalk.org/
+[i18n ruby gem]: http://guides.rubyonrails.org/i18n.html
+[internationalization]: http://en.wikipedia.org/wiki/Internationalization_and_localization
+[Transifex]: https://www.transifex.com/projects/p/litecoinorg/
+[Here]: http://middlemanapp.com/advanced/localization/index.html
