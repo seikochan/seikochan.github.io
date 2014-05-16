@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "GPG and PGP"
+date:   2014-04-10 03:51:37
+categories: 
+image:
+ feature: gpg_bg.jpg
+---
+
+With the internet, it is so hard to know if the person you are talking with or working with is who they say they are.  Physically, we can verify a person's identity usually with something like their signature.  The same idea was created for the internet, except it's called Pretty Good Privacy, or PGP for short.  Unfortunately, PGP is proprietary but there is an opensource version that does the same thing called GNU Privacy Guard, or GPG.  Although PGP is older than GPG, due to the fact that GPG is opensouce, it is now better than the orginal.  Before we go into more detail about this, you first need to have an understanding of symetric and asymetric
+ 
+
+##Symetric vs Asymetric Encryption  
+We are more familiar with symetric encryption.  This is the idea of a "shared secret".  Both parties must know the secret or have the "password", to be able to decrypt the item.  But theres a problem with this.  How do you get the secret to the other person safely?  If the secret is found by anyone else, they can freely decrypt your message as well!
+
+So this is why the idea of asymetric encryption came out.  The idea is to have a pair of keys.  One is your "private key", or the key you keep to yourself.  The other is the "public key".  The way this works is that the public key can encrypt messages, and the only one who can decrypt it is you, who has the matching private key.
+
+##Signing and Encryption/Decryption  
+Like it says above, you can safely use public and private keys to encrypt your data, but you can also use your private key to generate a "digital signature" that can be verified by others who have you matching public key.  This gives people a pretty good way of making sure the person they work with is truly who they say they are.  
+
+##Locating Your Keys  
+Once you have installed gpg and created your own gpg keys, you need to know where to find them.  In your home directory (~), there is a hidden directory, .ssh.  In this directory you will find these 2 files, 'id\_rsa' and 'id\_rsa.pub'.  The .pub one is your public key that you can share with the people you like, but make sure to keep the id_rsa one, which is your private key safe!
