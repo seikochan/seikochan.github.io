@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Hashes"
+date:   2014-04-19 07:08:20
+categories: 
+image:
+ feature: hashes_bg.png
+---
+
+Hashes help to verify that a product has not been modified from its original, advertised version.  The idea is that, given a hash function, you can provide your data to it to be hashed into a hash value.  Then you can provide this hash value and hash function to others who would like to verify the data they have is the same as the one you have.  This works because if the data is changed, the hash value will change slightly as well!    
+Here a is visual of this to make it simpler:  
+![hash_example](/images/hashes_pic.png)  
+
+Or if you prefer an example, here is a quote of an illustration by wikipedia of the use of hashes:  
+> Alice poses a tough math problem to Bob and claims she has solved it. Bob would like to try it himself, but would yet like to be sure that Alice is not bluffing. Therefore, Alice writes down her solution, computes its hash and tells Bob the hash value (whilst keeping the solution secret). Then, when Bob comes up with the solution himself a few days later, Alice can prove that she had the solution earlier by revealing it and having Bob hash it and check that it matches the hash value given to him before.
+
+
+##Checksum/Hashsum tools  
+This is similar to hashes but the main goal when using checksums are data integrity.  It acts as a digital fingerprint of a file.  Here is a similar visual:  
+![checksum_example](/images/checksum_pic.png)
+As you can see, the checksum sum works because whenever the input is changed, so is the checksum.  This is because the outputed checksum hash is based off of the binary contents of the input file.
+
+These are some of the following tools that provide the hash algorithms:  
+
+* md5sum 
+ * not deemed safe anymore
+ * produces 128-bit output   
+
+* sha256sum
+ * newer and "better"
+ * produces 256-bit output
+ * lower chance of collisions
